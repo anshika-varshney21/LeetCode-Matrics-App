@@ -17,3 +17,4 @@ Success rates
 
 ⚙️ Built with JavaScript and Fetch API
 
+![image](https://github.com/user-attachments/assets/ef85de5d-e38e-48bf-822d-d084e1933f27)
