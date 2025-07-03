@@ -2,6 +2,7 @@
 A simple web application to fetch and display LeetCode user statistics using LeetCode's GraphQL API.
 
 🚀 Features
+
 🔍 Fetches data by username
 
 📈 Displays:
