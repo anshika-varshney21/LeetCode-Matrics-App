@@ -1,0 +1,104 @@
+/* Default theme (dark) */
+:root {
+  --bg-primary: #373a4e;
+  --bg-secondary: #50515a;
+  --bg-gradient: linear-gradient(135deg, #6e7a91 0%, #2d2e36 60%, #1a1b1f 100%);
+  --text-primary: #e2e4e8;
+  --text-secondary: #b8bac0;
+  --accent-color: #ffa116;
+  --card-bg: #a4a8cf;
+  --card-border: rgba(255,255,255,0.08);
+  --progress-easy: #00b8a3;
+  --progress-medium: #ffc01e;
+  --progress-hard: #ff375f;
+  --input-bg: #f8fafc;
+  --input-text: #161111;
+  --button-bg: linear-gradient(90deg, #ffa116 60%, #ff8c00 100%);
+  --theme-icon: #ffa116;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #e2e4e8;
+  --bg-gradient: linear-gradient(135deg, #e2e4e8 0%, #f8fafc 60%, #ffffff 100%);
+  --text-primary: #262626;
+  --text-secondary: #4b5563;
+  --accent-color: #ff8c00;
+  --card-bg: #ffffff;
+  --card-border: rgba(0,0,0,0.08);
+  --progress-easy: #00a38e;
+  --progress-medium: #e6a800;
+  --progress-hard: #e62e4f;
+  --input-bg: #ffffff;
+  --input-text: #262626;
+  --button-bg: linear-gradient(90deg, #ff8c00 60%, #e67300 100%);
+  --theme-icon: #ff8c00;
+}
+
+/* Update existing styles to use CSS variables */
+body {
+  background: var(--bg-gradient);
+  color: var(--text-primary);
+}
+
+.container {
+  background: var(--bg-primary);
+  border-color: var(--card-border);
+}
+
+h1 {
+  color: var(--accent-color);
+}
+
+#user-input {
+  background: var(--input-bg);
+  color: var(--input-text);
+}
+
+#search-button {
+  background: var(--button-bg);
+}
+
+.easy-Progress {
+  border-color: var(--progress-easy);
+}
+
+.medium-Progress {
+  border-color: var(--progress-medium);
+}
+
+.hard-Progress {
+  border-color: var(--progress-hard);
+}
+
+.card {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.theme-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle svg {
+  stroke: var(--theme-icon);
+  width: 24px;
+  height: 24px;
+}
+
+#theme-toggle:hover {
+  transform: rotate(30deg);
+}
